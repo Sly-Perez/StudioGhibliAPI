@@ -17,15 +17,15 @@ Furthermore, the api's database was done in <b>MongoDB</b>.<br>
 <span><b>GET</b></span><br>
 1)<br>
 <b>@desc</b>	GET ALL MOVIES<br>
-<b>@route</b>	GET <b>/movies</b><br>
+<b>@route</b>	GET <b>/SGapi/movies</b><br>
 <b>@access</b>	public<br>
 
 2)<br>
 <b>@desc</b>	GET MOVIE BY ID<br>
-<b>@route</b>	GET	    <b>/movies/:id</b><br>
+<b>@route</b>	GET	    <b>/SGapi/movies/:id</b><br>
 <b>@access</b>	public<br>
 
 3)<br>
 <b>@desc</b>	GET POSTER OF MOVIE BY FILENAME<br>
-<b>@route</b>	GET	    <b>/movies/poster/:postername</b><br>
+<b>@route</b>	GET	    <b>/SGapi/movies/poster/:postername</b><br>
 <b>@access</b> public<br>
