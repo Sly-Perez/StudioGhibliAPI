@@ -5,6 +5,12 @@ body{
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    @media (max-width: 67.188rem){
+        font-size: 1.2rem;
+    }
+    @media (max-width: 25rem){
+        font-size: 1.3rem;
+    }
 }
 .padded{
     padding-top: 1.25rem;
@@ -22,6 +28,12 @@ body{
 }
 .width-50{
     width: 50%;
+    @media (max-width: 67.188rem){
+        width: 80%;
+    }
+    @media (max-width: 25rem){
+        width: 90%;;
+    }
 }
 .p-20{
     padding: 1.25rem;
