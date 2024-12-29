@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config();
 const path = require('path');
+const helmet = require('helmet');
 
 const PORT = process.env.PORT || 5001;
 
@@ -16,6 +17,8 @@ const webRouter = require('./src/routes/webRoutes');
 const errorHandler = require('./src/middlewares/errorHandler');
 
 connectToDB();
+app.use(helmet());
+app.use(express.static(path.join(__dirname, 'public', 'assets')));
 app.set('views', path.join(__dirname, 'public', 'views'));
 app.set("view engine", "ejs");
 app.use(webRouter);
