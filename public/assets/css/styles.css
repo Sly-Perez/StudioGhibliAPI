@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.padded{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.text-center{
+    text-align: center;
+}
+.min-height-800{
+    min-height: 50rem;
+}
+.width-50{
+    width: 50%;
+}
+.p-20{
+    padding: 1.25rem;
+}
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+.changing-font-color{
+    animation: changing-font-color-animation 7s infinite;
+    transition: all ease-out 1s infinite;
+    z-index: 2;
+}
+@keyframes changing-font-color-animation{
+    0%{
+        background: linear-gradient(90deg, #fffc5f, #f3fe7b);
+        background-clip: text;
+        color: transparent;
+    }
+    20%{
+        background: linear-gradient(90deg, #62ff5f, #9afe7b);
+        background-clip: text;
+        color: transparent;
+    }
+    40%{
+        background: linear-gradient(90deg, #5f9aff, #7f7bfe);
+        background-clip: text;
+        color: transparent;
+    }
+    60%{
+        background: linear-gradient(90deg, #f75fff, #fe7bdd);
+        background-clip: text;
+        color: transparent;
+    }
+    80%{
+        background: linear-gradient(90deg, #ff5f5f, #fe7b7b);
+        background-clip: text;
+        color: transparent;
+    }
+    100%{
+        background: linear-gradient(90deg, #fffc5f, #f3fe7b);
+        background-clip: text;
+        color: transparent;
+    }
+}
+.text-shadow-sm{
+    z-index: 1;
+    text-shadow: 0.20rem 0.20rem #0000002d;
+}
+.box-shadow-sm{
+    box-shadow: 0.313rem 0.313rem #0000002d;
+}
+#section-1{
+    background-image: url('../images/page/section-1-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro-card{
+    background-color: #fff;
+    border-radius: 1.20rem;
+}
+.documentation-anchor{
+    text-decoration: none;
+}
+.documentation-anchor:hover{
+    text-decoration: underline;
+}
