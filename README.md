@@ -27,5 +27,5 @@ Furthermore, the api's database was done in <b>MongoDB</b>.<br>
 
 3)<br>
 <b>@desc</b>	GET POSTER OF MOVIE BY FILENAME<br>
-<b>@route</b>	GET	    <b>/SGapi/movies/poster/:postername</b><br>
+<b>@route</b>	GET	    <b>/SGapi/movies/posters/:postername</b><br>
 <b>@access</b> public<br>
