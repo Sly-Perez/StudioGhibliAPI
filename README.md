@@ -9,6 +9,8 @@ This api was developed in <b>Nodejs</b>, and it uses the following libraries:<br
   <li>Mongoose</li>
   <li>Dotenv</li>
   <li>Ejs</li>
+  <li>Helmet</li>
+  <li>Cors</li>
 </ul>
 Furthermore, the api's database was done in <b>MongoDB</b>.<br>
 

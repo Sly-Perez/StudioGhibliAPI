@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv').config();
 const path = require('path');
 const helmet = require('helmet');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 5001;
 
@@ -17,6 +18,7 @@ const webRouter = require('./src/routes/webRoutes');
 const errorHandler = require('./src/middlewares/errorHandler');
 
 connectToDB();
+app.use(cors());
 app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public', 'assets')));
 app.set('views', path.join(__dirname, 'public', 'views'));
