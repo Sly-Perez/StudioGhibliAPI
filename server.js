@@ -23,6 +23,10 @@ app.use(helmet());
 app.use(express.static(path.join(__dirname, 'public', 'assets')));
 app.set('views', path.join(__dirname, 'public', 'views'));
 app.set("view engine", "ejs");
+app.use((req, res, next)=>{
+    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+    next();
+});
 app.use(webRouter);
 app.use('/SGapi/movies', movieRouter);
 app.use(errorHandler);
