@@ -10,7 +10,7 @@ const rootpath = process.cwd();
 //@route    GET /SGapi/movies/ || /SGapi/movies
 //@access   public
 const getAllMovies = asyncHandler(async (req, res)=>{
-    const movies = await Movie.find({}, {_id: false});
+    const movies = await Movie.find({}, {_id: false}).sort({id: 1});;
 
     res.status(200).json(movies);
 });
