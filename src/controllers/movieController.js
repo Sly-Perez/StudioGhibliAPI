@@ -33,16 +33,27 @@ const getMovieById = asyncHandler(async (req, res)=>{
     res.status(200).json(movie);
 });
 
-//@desc GET MOVIE POSTER BY NAME
-//@route    GET /SGapi/movies/posters/:postername/ || /SGapi/movies/posters/:postername
+//@desc GET MOVIE POSTER BY MOVIE ID
+//@route    GET /SGapi/movies/:id/posters/ || /SGapi/movies/:id/posters/
 //@access   public
-const getPosterByName = asyncHandler(async (req, res)=>{
+const getPosterByMovieId = asyncHandler(async (req, res)=>{
+    if(!parseInt(req.params.id)){
+        res.status(404);
+        throw new Error("Not Found");
+    }
+
+    const movie = await Movie.findOne({id: req.params.id}, {_id: false});
+
+    if(!movie){
+        res.status(404);
+        throw new Error("Not Found");
+    }
     res.status(200);
-    res.sendFile(path.join(rootpath, 'public', 'assets', 'images' ,'posters', req.params.postername));
+    res.sendFile(path.join(rootpath, 'public', 'assets', 'images' ,'posters', movie.poster));
 });
 
 module.exports = {
     getAllMovies,
     getMovieById,
-    getPosterByName
+    getPosterByMovieId
 };
