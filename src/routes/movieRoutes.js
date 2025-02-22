@@ -5,29 +5,24 @@ const router = express.Router();
 const { 
     getAllMovies, 
     getMovieById,
-    getPosterByName
+    getPosterByMovieId
 } = require('../controllers/movieController');
 
 //getAllMovies
 router.get('/', getAllMovies );
 
-//getPosterOfMovie
-router.param('postername', (req, res, next, postername)=>{
-    //console.log(`${postername}`);
-    next();
-});
 
-router.route('/posters/:postername')
-    .get( getPosterByName );
-
-//getMovieById
+//id parameter
 router.param('id', (req, res, next, id)=>{
     //console.log(`${id}`);
     next();
 });
 
+//getMovieById
 router.route('/:id')
     .get( getMovieById );
-
+//getPosterByMovieId
+router.route('/:id/posters')
+    .get( getPosterByMovieId );
 
 module.exports = router;
