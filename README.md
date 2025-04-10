@@ -187,7 +187,7 @@ If everything went well, the API should send back a JSON object with the informa
 If a movie with the given id does not exist, the API should send back a JSON object with the corresponding error message and a **404** status code.
 ```
 [Content-Type: "application/json"]
-[example of path: "/SGapi/movies/ksfekf"]
+[example of path: "/SGapi/movies/ksfekf/posters"]
 {
     "error": "Not Found"
 }
