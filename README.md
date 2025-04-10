@@ -119,8 +119,7 @@ If everything went well, the API should send back a JSON object with the informa
 ```
 [Content-Type: "application/json"]
 [example of path: "/SGapi/movies/2"]
-[
-  {
+{
     "id": 2,
     "title": "movie 2",
     "description": "movie 2 description",
@@ -152,8 +151,7 @@ If everything went well, the API should send back a JSON object with the informa
     "durationInMinutes": 80,
     "budget": 5000000,
     "grossWorldwide": 30000000
-  }
-]
+}
 ```
 
 **Expected exception response:**<br>
